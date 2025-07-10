@@ -1,0 +1,20 @@
+body {
+  margin: auto;
+  width: 500px;
+}
+
+h5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#status {
+  text-align: center;
+  font-size: 1.2em;
+}
+.alert {
+  margin-top: 20px;
+}
+.alert-secondary {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}

@@ -3,7 +3,7 @@
   "name": "Malicious Site Detector",
   "version": "1.0",
   "description": "Detects potentially malicious websites.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "tabs"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
