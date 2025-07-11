@@ -40,10 +40,10 @@ function isSuspiciousURL(url) {
     /\.tk$/,
     /\.ga$/,
     /\.ml$/,
-    /\.cf$/, // Suspicious TLDs
-    /\d+\.\d+\.\d+\.\d+/, // IP addresses
-    /(paypal|google|facebook)\.[a-z0-9-]+\./, // Subdomain abuse
-    /(login|verify|account|secure|update)/, // Keywords in path
+    /\.cf$/,
+    /\d+\.\d+\.\d+\.\d+/,
+    /(paypal|google|facebook)\.[a-z0-9-]+\./,
+    /(login|verify|account|secure|update)/,
   ];
 
   return badPatterns.some((pattern) => pattern.test(url));
