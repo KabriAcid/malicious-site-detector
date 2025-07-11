@@ -34,3 +34,23 @@ if (containsSuspiciousWords || hasPasswordField) {
     "⚠️ Warning: This website may be suspicious!\nStay cautious before entering sensitive information."
   );
 }
+
+function isSuspiciousURL(url) {
+  const badPatterns = [
+    /\.tk$/,
+    /\.ga$/,
+    /\.ml$/,
+    /\.cf$/, // Suspicious TLDs
+    /\d+\.\d+\.\d+\.\d+/, // IP addresses
+    /(paypal|google|facebook)\.[a-z0-9-]+\./, // Subdomain abuse
+    /(login|verify|account|secure|update)/, // Keywords in path
+  ];
+
+  return badPatterns.some((pattern) => pattern.test(url));
+}
+
+const url = window.location.href.toLowerCase();
+
+if (isSuspiciousURL(url)) {
+  alert("🚨 Suspicious URL detected!");
+}
